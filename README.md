@@ -2,9 +2,7 @@
 
 本项目是作为学习前后端分离的后台管理系统的练习项目，前端采用Vue+Element UI 框架搭建页面，后端采用了SpringBoot + Mybatis+Mysql技术栈。实现用户登录和注册
 
-
-
-
+![https://github.com/xuqiang518/springboot-vue/blob/master/img/%E6%89%B9%E6%B3%A8%202022-07-05%20213601.jpg]()
 
 注册时用户密码采用md5加密：
 
