@@ -36,6 +36,8 @@ public class FileController {
 
     @Value("${files.upload.path}")
     private String fileUploadPath;
+    @Value("${server.ip}")
+    private String serverIp;
 
     @Resource
     private FileMapper fileMapper;
@@ -73,7 +75,7 @@ public class FileController {
         }else {
             //将获取的文件存储到磁盘中
             file.transferTo(uploadFile);
-            url = "http://localhost:8090/file/" + fileUUID;
+            url = "http://"+ serverIp + ":8090/file/" + fileUUID;
         }
 
         //存储数据库

@@ -1,10 +1,11 @@
 server:
   port: 8090
-
+  ip: 114.116.99.250
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/qiang?serverTimezone=GMT%2b8
+    #url: jdbc:mysql://localhost:3306/qiang?serverTimezone=GMT%2b8
+    url: jdbc:mysql://114.116.99.250:3306/qiang?serverTimezone=GMT%2b8
     password: 123456
     username: root
   mvc:
@@ -24,5 +25,5 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 files:
   upload:
-    path: D:/VUE/vue2/files/
-#    path: /home/files/
+    #path: D:/VUE/vue2/files/
+    path: /home/files/

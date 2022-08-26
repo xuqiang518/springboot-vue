@@ -111,7 +111,6 @@
 <script>
 
     import axios from "axios";
-
     export default {
         name: "Article",
         data() {
@@ -128,6 +127,7 @@
                 user: localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : {},
                 content: '',
                 viewDialogVis: false
+
             }
         },
         created() {
@@ -145,7 +145,8 @@
                 const formData = new FormData();
                 formData.append('file', $file);
                 axios({
-                    url: 'http://localhost:8090/file/upload',
+                    //url: 'http://localhost:8090/file/upload',
+                    url: 'http://114.116.99.250:8090/file/upload',
                     method: 'post',
                     data: formData,
                     headers: {'Content-Type': 'multipart/form-data'},

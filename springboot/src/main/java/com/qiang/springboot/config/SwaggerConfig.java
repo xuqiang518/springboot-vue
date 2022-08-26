@@ -2,6 +2,7 @@ package com.qiang.springboot.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -29,9 +30,9 @@ public class SwaggerConfig {
      */
     @Bean
     public Docket restApi() {
-        return new Docket(DocumentationType.SWAGGER_2)
+        return new Docket(DocumentationType.OAS_30) //SWAGGER_2
                 .groupName("标准接口")
-                .apiInfo(apiInfo("Spring Boot中使用Swagger2构建RESTful APIs", "1.0"))
+                .apiInfo(apiInfo("Spring Boot中使用Swagger3构建RESTful APIs", "3.0"))
                 .useDefaultResponseMessages(true)
                 .forCodeGeneration(false)
                 .select()
